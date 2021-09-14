@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.lenovo.feizai.medical.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.lenovo.feizai.medical.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordslistfragment"
+        android:name="com.lenovo.feizai.medical.fragment.RecordsListFragment"
+        android:label="fragment_records_list"
+        tools:layout="@layout/fragment_records_list" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.lenovo.feizai.medical.fragment.RecordsListItemInfoFragment"
+        android:label="fragment_recordslistiteminfo"
+        tools:layout="@layout/fragment_info"/>
+</navigation>
